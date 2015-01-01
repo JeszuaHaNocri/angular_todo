@@ -1,5 +1,6 @@
 var app = angular.module('Todo', []);
 
-app.controller('Todo', function () {
+app.controller('TodoCtrl', function ($scope) {
+    $scope.message = 'Message';
 
 });
