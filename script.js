@@ -3,9 +3,15 @@ var app = angular.module('Todo', []);
 app.controller('TodoCtrl', function ($scope) {
     $scope.message = 'Message';
     $scope.todos = [
-        'Learn Sketch',
-        'Look at Dribbble and feel inferior',
-        'Actually learn how to use the Pen tool'
+        'Task 1',
+        'Task 2',
+        'Task 3'
     ];
 
+    $scope.done = function (todo) {
+        var indexOf = $scope.todos.indexOf(todo);
+        if (indexOf !== -1) {
+            $scope.todos.splice(indexOf, 1);
+        }
+    }
 });
