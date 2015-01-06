@@ -14,7 +14,7 @@
 
     <ul class="todo-list" ng-repeat="todo in todos track by $index">
         <li>
-            <span>{{ todo }}</span>
+            <span>{{ todo.name }}</span>
             <button class="bt bt-achieve" ng-click="done(todo)">Done</button>
         </li>
     </ul>
@@ -22,9 +22,11 @@
     <ul class="add-todo">
         <li>
             <input type="text" class="txt" placeholder="New Todo"
-                   ng-model="newTodo" ng-keyup="add($event)"/>
+                   ng-model="newTodo.name" ng-keyup="add($event)"/><br>
+            <input type="checkbox" ng-model="newTodo.important"/>important task
         </li>
     </ul>
+
 
 
 </div>
