@@ -2,6 +2,7 @@ var app = angular.module('Todo', []);
 
 app.controller('TodoCtrl', function ($scope) {
     $scope.message = 'Message';
+
     $scope.emptyTodo = {
         name: '',
         important: false
@@ -38,6 +39,5 @@ app.controller('TodoCtrl', function ($scope) {
             $scope.newTodo = angular.copy($scope.emptyTodo);
         }
     }
-
 
 });
