@@ -5,7 +5,9 @@ app.controller('TodoCtrl', function ($scope) {
 
     $scope.emptyTodo = {
         name: '',
-        important: false
+        normal: true,
+        important: false,
+        veryImportant: false
     };
 
     $scope.newTodo = angular.copy($scope.emptyTodo);
@@ -13,15 +15,21 @@ app.controller('TodoCtrl', function ($scope) {
     $scope.todos = [
         {
             name: 'Task 1',
-            important: false
+            normal: true,
+            important: false,
+            veryImportant: false
         },
         {
             name: 'Task 2',
-            important: false
+            normal: true,
+            important: false,
+            veryImportant: false
         },
         {
             name: 'Task 3',
-            important: false
+            normal: true,
+            important: false,
+            veryImportant: false
         }
     ];
 

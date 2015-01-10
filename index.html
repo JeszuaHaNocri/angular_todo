@@ -17,9 +17,13 @@
             <span>{{ todo.name }}</span>
             <button class="bt bt-rebel" ng-click="done(todo)">Done</button>
         </li>
-        <li ng-hide="todo.important">
+        <li ng-show="todo.normal">
             <span>{{ todo.name }}</span>
             <button class="bt bt-achieve" ng-click="done(todo)">Done</button>
+        </li>
+        <li ng-show="todo.veryImportant">
+            <span>{{ todo.name }}</span>
+            <button class="bt bt-rebel2" ng-click="done(todo)">Done</button>
         </li>
     </ul>
 
@@ -27,7 +31,12 @@
         <li>
             <input type="text" class="txt" placeholder="New Todo"
                    ng-model="newTodo.name" ng-keyup="add($event)"/><br>
-            <input type="checkbox" ng-model="newTodo.important"/>important task
+
+            <form>
+                <input type="radio" name="importance" ng-model="newTodo.normal">Normal task<br>
+                <input type="radio" name="importance" ng-model="newTodo.important">Important task<br>
+                <input type="radio" name="importance" ng-model="newTodo.veryImportant">Very important task
+            </form>
         </li>
     </ul>
 

@@ -39,6 +39,11 @@ body {
     color: #fff;
 }
 
+.bt.bt-rebel2 {
+    background: #fbff6b;
+    color: #444349;
+}
+
 .bt.bt-achieve {
     background: #9dc9a8;
     color: #444349;
